@@ -22,11 +22,12 @@ class TailLinkedListNode(private val value: Int, private var next: TailLinkedLis
         return n.value
     }
 
-    fun print() {  // FIXME
+    fun print() {
         var n = this
         while (n.next != null) {
             println(n.value)
             n = n.next!!
         }
+        println(n.value)
     }
 }
