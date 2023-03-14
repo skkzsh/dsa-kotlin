@@ -15,9 +15,9 @@ class HeadLinkedListNodeTest {
 
         // n.print() // debug
 
-        assertEquals(103, n.get(0))
-        assertEquals(102, n.get(1))
-        assertEquals(101, n.get(2))
-        assertEquals(100, n.get(3))
+        assertEquals(103, n.at(0))
+        assertEquals(102, n.at(1))
+        assertEquals(101, n.at(2))
+        assertEquals(100, n.at(3))
     }
 }
