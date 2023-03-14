@@ -1,25 +1,15 @@
 package dev.skkzsh.dsa
 
-class LinkedListNode(private val value: Int, private var next: LinkedListNode? = null) {
+class HeadLinkedListNode(private val value: Int, private var next: HeadLinkedListNode? = null) {
 
-    fun appendToHead(value: Int) {  // TODO
-        val new = LinkedListNode(value)
+    // O(1)
+    fun append(value: Int) {  // TODO
+        val new = HeadLinkedListNode(value)
 
         new.next = this
         // this = new
 
         throw UnsupportedOperationException("未実装")
-    }
-
-    fun appendToTail(value: Int) {
-        val new = LinkedListNode(value)
-
-        var n = this
-        while (n.next != null) {
-            n = n.next!!
-        }
-
-        n.next = new
     }
 
     fun get(num: Int): Int {
