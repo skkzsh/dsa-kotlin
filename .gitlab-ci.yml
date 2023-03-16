@@ -1,0 +1,14 @@
+image: cimg/openjdk:17.0
+stages:
+  - test
+  - publish
+
+test-job:
+  stage: test
+  script: ./gradlew test
+
+publish-job:
+  stage: publish
+  script: ./gradlew publish
+  only:
+    - main
