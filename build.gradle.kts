@@ -28,22 +28,20 @@ kotlin {
 //}
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/skkzsh/dsa-kotlin")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
     publications {
-        create<MavenPublication>("maven") {
+        create<MavenPublication>("gpr") {
             from(components["java"])
         }
     }
-    repositories {
-        maven {
-            url = uri("https://gitlab.com/api/v4/projects/44282995/packages/maven")
-            name = "GitLab"
-            credentials(HttpHeaderCredentials::class) {
-                name = "Deploy-Token"
-                value = System.getenv("MAVEN_DEPLOY_TOKEN")
-            }
-            authentication {
-                create<HttpHeaderAuthentication>("header")
-            }
-        }
-    }
+
 }
