@@ -1,4 +1,4 @@
-package dev.skkzsh.dsa
+package dev.skkzsh.dsa.linkedlist
 
 class TailDoublyLinkedListNode(val value: Int) {
     private var next: TailDoublyLinkedListNode? = null
