@@ -1,10 +1,10 @@
 package dev.skkzsh.dsa.linkedlist
 
-class HeadLinkedListNode(private val value: Int) {
+class HeadLinkedListNode(private val value: Int) : LinkedListNode {
     private var next: HeadLinkedListNode? = null
 
     // O(1)
-    fun append(value: Int) {  // TODO
+    override fun append(value: Int) {  // TODO
         val new = HeadLinkedListNode(value)
 
         new.next = this
@@ -13,7 +13,7 @@ class HeadLinkedListNode(private val value: Int) {
         throw UnsupportedOperationException("未実装")
     }
 
-    fun at(num: Int): Int {
+    override fun at(num: Int): Int {
         var n = this
         for (i in 0 until num) {
             n = n.next!!
@@ -21,7 +21,7 @@ class HeadLinkedListNode(private val value: Int) {
         return n.value
     }
 
-    fun print() {
+    override fun print() {
         var n = this
         while (n.next != null) {
             println(n.value)

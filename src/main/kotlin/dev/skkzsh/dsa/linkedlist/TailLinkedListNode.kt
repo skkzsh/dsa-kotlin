@@ -1,10 +1,10 @@
 package dev.skkzsh.dsa.linkedlist
 
-class TailLinkedListNode(private val value: Int) {
+class TailLinkedListNode(private val value: Int) : LinkedListNode {
     private var next: TailLinkedListNode? = null
 
     // O(n)
-    fun append(value: Int) {
+    override fun append(value: Int) {
         val new = TailLinkedListNode(value)
 
         var n = this
@@ -15,7 +15,7 @@ class TailLinkedListNode(private val value: Int) {
         n.next = new
     }
 
-    fun at(num: Int): Int {
+    override fun at(num: Int): Int {
         var n = this
         for (i in 0 until num) {
             n = n.next!!
@@ -23,7 +23,7 @@ class TailLinkedListNode(private val value: Int) {
         return n.value
     }
 
-    fun print() {
+    override fun print() {
         var n = this
         while (n.next != null) {
             println(n.value)
