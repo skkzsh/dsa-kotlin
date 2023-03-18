@@ -1,6 +1,6 @@
 package dev.skkzsh.dsa.linkedlist
 
-class TailLinkedListNode(private val value: Int) : LinkedListNode {
+open class TailLinkedListNode(private val value: Int) : LinkedListNode {
     private var next: TailLinkedListNode? = null
 
     // O(n)
