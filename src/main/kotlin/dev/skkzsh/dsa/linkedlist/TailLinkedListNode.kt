@@ -1,7 +1,7 @@
 package dev.skkzsh.dsa.linkedlist
 
-open class TailLinkedListNode(private val value: Int) : LinkedListNode {
-    private var next: TailLinkedListNode? = null
+open class TailLinkedListNode(val value: Int) : LinkedListNode {
+    var next: TailLinkedListNode? = null
 
     // O(n)
     override fun append(value: Int) {
