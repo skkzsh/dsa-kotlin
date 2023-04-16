@@ -1,6 +1,5 @@
 package dev.skkzsh.dsa.linkedlist
 
-import dev.skkzsh.dsa.linkedlist.TailLinkedListNode
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
