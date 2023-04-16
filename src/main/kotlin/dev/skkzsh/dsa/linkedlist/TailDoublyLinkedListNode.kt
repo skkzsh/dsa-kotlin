@@ -31,7 +31,7 @@ class TailDoublyLinkedListNode(val value: Int) {
     fun print() {
         var n = this
         while (n.next != null) {
-            println(n.value)
+            print(n.value.toString() + " ")
             n = n.next!!
         }
         println(n.value)

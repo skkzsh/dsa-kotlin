@@ -24,7 +24,7 @@ class HeadLinkedListNode(private val value: Int) : LinkedListNode {
     override fun print() {
         var n = this
         while (n.next != null) {
-            println(n.value)
+            print(n.value.toString() + " ")
             n = n.next!!
         }
         println(n.value)
