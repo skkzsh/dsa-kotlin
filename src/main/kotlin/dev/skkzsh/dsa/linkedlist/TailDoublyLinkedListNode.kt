@@ -3,6 +3,7 @@ package dev.skkzsh.dsa.linkedlist
 class TailDoublyLinkedListNode(val value: Int) {
     private var next: TailDoublyLinkedListNode? = null
     private var prev: TailDoublyLinkedListNode? = null
+    private var length: Int = 1
 
     // O(n)
     fun append(new: TailDoublyLinkedListNode) {
@@ -13,11 +14,14 @@ class TailDoublyLinkedListNode(val value: Int) {
 
         n.next = new
         new.prev = n
+
+        length++
     }
 
     fun delete(n: TailDoublyLinkedListNode) {
         n.prev?.next = n.next
         n.next?.prev = n.prev
+        length--
     }
 
     fun at(num: Int): TailDoublyLinkedListNode {
@@ -35,5 +39,9 @@ class TailDoublyLinkedListNode(val value: Int) {
             n = n.next!!
         }
         println(n.value)
+    }
+
+    fun length(): Int {
+        return length
     }
 }

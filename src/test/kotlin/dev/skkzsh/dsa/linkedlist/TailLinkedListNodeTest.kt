@@ -14,6 +14,7 @@ class TailLinkedListNodeTest {
 
         // n.print() // debug
 
+        assertEquals(4, n.length())
         assertEquals(100, n.at(0))
         assertEquals(101, n.at(1))
         assertEquals(102, n.at(2))

@@ -2,6 +2,7 @@ package dev.skkzsh.dsa.linkedlist
 
 open class TailLinkedListNode(val value: Int) : LinkedListNode {
     var next: TailLinkedListNode? = null
+    protected var length: Int = 1
 
     // O(n)
     override fun append(value: Int) {
@@ -13,6 +14,8 @@ open class TailLinkedListNode(val value: Int) : LinkedListNode {
         }
 
         n.next = new
+
+        length++
     }
 
     override fun at(num: Int): Int {
@@ -30,5 +33,9 @@ open class TailLinkedListNode(val value: Int) : LinkedListNode {
             n = n.next!!
         }
         println(n.value)
+    }
+    
+    fun length(): Int {
+        return length
     }
 }

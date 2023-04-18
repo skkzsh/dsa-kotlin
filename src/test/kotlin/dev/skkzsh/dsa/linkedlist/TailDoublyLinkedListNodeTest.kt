@@ -19,6 +19,7 @@ class TailDoublyLinkedListNodeTest {
 
     @Test
     fun append() {
+        assertEquals(4, n.length())
         assertEquals(100, n.at(0).value)
         assertEquals(101, n.at(1).value)
         assertEquals(102, n.at(2).value)
@@ -31,6 +32,7 @@ class TailDoublyLinkedListNodeTest {
 
         // n.print() // debug
 
+        assertEquals(3, n.length())
         assertEquals(100, n.at(0).value)
         assertEquals(101, n.at(1).value)
         assertEquals(103, n.at(2).value)
