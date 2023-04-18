@@ -1,9 +1,9 @@
 package dev.skkzsh.dsa.linkedlist
 
-class TailDoublyLinkedListNode(val value: Int) {
-    private var next: TailDoublyLinkedListNode? = null
-    private var prev: TailDoublyLinkedListNode? = null
-    private var length: Int = 1
+open class TailDoublyLinkedListNode(val value: Int) {
+    var next: TailDoublyLinkedListNode? = null
+    var prev: TailDoublyLinkedListNode? = null
+    protected var length: Int = 1
 
     // O(n)
     fun append(new: TailDoublyLinkedListNode) {
