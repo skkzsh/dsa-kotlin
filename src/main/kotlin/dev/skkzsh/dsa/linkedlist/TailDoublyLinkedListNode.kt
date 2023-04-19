@@ -1,5 +1,7 @@
 package dev.skkzsh.dsa.linkedlist
 
+// 双方向連結リスト
+// 末尾に追加していく
 open class TailDoublyLinkedListNode(val value: Int) {
     var next: TailDoublyLinkedListNode? = null
     var prev: TailDoublyLinkedListNode? = null

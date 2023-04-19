@@ -1,5 +1,7 @@
 package dev.skkzsh.dsa.linkedlist
 
+// 単方向連結リスト
+// 先頭に追加していく
 class HeadLinkedListNode(private val value: Int) : LinkedListNode {
     private var next: HeadLinkedListNode? = null
 
