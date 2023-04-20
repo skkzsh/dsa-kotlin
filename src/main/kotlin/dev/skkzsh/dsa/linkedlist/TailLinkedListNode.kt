@@ -20,6 +20,17 @@ open class TailLinkedListNode(val value: Int) : LinkedListNode {
         length++
     }
 
+    // fun delete(d: TailLinkedListNode) {
+    //     var n: TailLinkedListNode? = this
+
+    //     while (n.next != null) {
+    //         n = n.next
+    //     }
+    //     n.next = d.next
+
+    //     length--
+    // }
+
     override fun at(num: Int): Int {
         var n = this
         for (i in 0 until num) {
