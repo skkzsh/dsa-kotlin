@@ -35,12 +35,12 @@ open class TailDoublyLinkedListNode(val value: Int) {
     }
 
     fun print() {
-        var n = this
-        while (n.next != null) {
-            print(n.value.toString() + " ")
-            n = n.next!!
+        var n: TailDoublyLinkedListNode? = this
+        while (n != null) {
+            print("${n.value} ")
+            n = n.next
         }
-        println(n.value)
+        println()
     }
 
     fun length(): Int {
